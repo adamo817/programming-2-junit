@@ -52,6 +52,15 @@ public class PriceFormatterTest {
     }
 
     @Test
+    void testSingleDecimalDigit() {
+        PriceFormatter formatter = new PriceFormatter();
+
+        String result = formatter.formatPrice(3.5);
+
+        assertEquals("3,50 €", result);
+    }
+
+    @Test
     void testZeroDecimals() {
         PriceFormatter formatter = new PriceFormatter();
 
