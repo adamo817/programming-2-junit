@@ -43,6 +43,15 @@ public class PriceFormatterTest {
     }
 
     @Test
+    void testRoundingDown() {
+        PriceFormatter formatter = new PriceFormatter();
+
+        String result = formatter.formatPrice(3.14159);
+
+        assertEquals("3,14 €", result);
+    }
+
+    @Test
     void testZeroDecimals() {
         PriceFormatter formatter = new PriceFormatter();
 
